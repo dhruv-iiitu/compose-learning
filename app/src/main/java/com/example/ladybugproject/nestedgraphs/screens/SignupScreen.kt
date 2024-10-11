@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.ladybugproject.ui.theme.ScreenRoutes
 
 @Composable
 fun SignupScreen(modifier: Modifier = Modifier,onClick:()->Unit) {

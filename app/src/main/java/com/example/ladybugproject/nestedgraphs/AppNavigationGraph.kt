@@ -15,7 +15,6 @@ import com.example.ladybugproject.nestedgraphs.screens.LoginScreen
 import com.example.ladybugproject.nestedgraphs.screens.LogoutScreen
 import com.example.ladybugproject.nestedgraphs.screens.ProfileScreen
 import com.example.ladybugproject.nestedgraphs.screens.SignupScreen
-import com.example.ladybugproject.ui.theme.ScreenRoutes
 
 @Composable
 fun AppNavigationGraph(modifier: Modifier = Modifier,startDestination: String = ScreenRoutes.AuthGraph.route) {

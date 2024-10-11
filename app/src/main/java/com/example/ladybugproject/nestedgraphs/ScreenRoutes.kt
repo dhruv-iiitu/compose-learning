@@ -1,4 +1,4 @@
-package com.example.ladybugproject.ui.theme
+package com.example.ladybugproject.nestedgraphs
 
 sealed class ScreenRoutes(val route: String){
 
