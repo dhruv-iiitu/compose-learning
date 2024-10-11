@@ -15,7 +15,7 @@
         <activity
             android:name=".nestedgraphs.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.LadyBugProject">
+            android:theme="@style/Theme.MyApp.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

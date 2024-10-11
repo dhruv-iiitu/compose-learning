@@ -59,6 +59,9 @@ dependencies {
     //Navigation Dependency
     implementation(libs.androidx.navigation.compose)
     implementation (libs.material3)
+//    splash screen
+    implementation (libs.androidx.core.splashscreen)
+
 
 
 }
