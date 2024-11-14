@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.LadyBugProject" parent="android:Theme.Material.Light.NoActionBar.Fullscreen"/>
+    <style name="Theme.LadyBugProject" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" />
+
     <style name="Theme.MyApp.Splash" parent="Theme.SplashScreen">
         <!-- Set your splash screen background color -->
         <item name="windowSplashScreenBackground">@color/purple_200</item>
