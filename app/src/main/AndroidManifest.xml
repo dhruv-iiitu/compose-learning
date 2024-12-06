@@ -13,6 +13,22 @@
         android:theme="@style/Theme.LadyBugProject"
         tools:targetApi="31">
         <activity
+            android:name=".part2.Part2LauncherActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".part2.GenericComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_generic_compose"
+            android:theme="@style/Theme.LadyBugProject" />
+        <activity
             android:name=".activityWithGenericNavGraph.GenericComposeActivity"
             android:exported="false"
             android:label="@string/title_activity_generic_compose"

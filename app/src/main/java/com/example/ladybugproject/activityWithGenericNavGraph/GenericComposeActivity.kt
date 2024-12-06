@@ -1,38 +1,66 @@
 package com.example.ladybugproject.activityWithGenericNavGraph
 
-import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.os.Parcelable
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
-import com.example.ladybugproject.activityWithGenericNavGraph.factoryPattern.NavGraphBuilderFactory
-
-class GenericComposeActivity : ComponentActivity() {
+//
+class GenericComposeActivity<T : NavGraphBuilder<T>> : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
+//        val navGraphBuilderClass = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//            intent.getParcelableExtraCompat("key")
+//        } else {
+//            @Suppress("DEPRECATION")
+//            intent.getParcelableExtraCompat("key")
+//        }
+//
+//        if (navGraphBuilderClass == null) {
+//            finish() // Exit if the class isn't provided
+//            return
+//        }
+//
         setContent {
-            val navController = rememberNavController()
-            // Use the factory to create and set up the appropriate NavGraphBuilder
-            val navGraphBuilder = factory?.create()
-            navGraphBuilder?.BuildGraph(navController)
+//            val navController = rememberNavController()
+
+            // Use reflection to create an instance of the nav graph builder
+//            val navGraphBuilder = createNavGraphBuilderInstance(navGraphBuilderClass)
+//            navGraphBuilder?.BuildGraph(navController)
         }
     }
-
+//
+//    inline fun <reified T : Parcelable> Intent.getParcelableExtraCompat(key: String): T? {
+//        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//            getParcelableExtra(key, T::class.java)
+//        } else {
+//            @Suppress("DEPRECATION")
+//            getParcelableExtra(key)
+//        }
+//    }
+//
+//    private fun createNavGraphBuilderInstance(clazz: Class<T>): T? {
+//        return try {
+//            clazz.getDeclaredConstructor().newInstance()
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//            null
+//        }
+//    }
+//
     companion object {
-        // Holds the current factory instance to be set before starting the activity
-        var factory: NavGraphBuilderFactory? = null
-
-        fun start(context: Context, navGraphBuilderFactory: NavGraphBuilderFactory) {
-            factory = navGraphBuilderFactory
-            val intent = Intent(context, GenericComposeActivity::class.java)
-            context.startActivity(intent)
-        }
+        const val NAV_GRAPH_BUILDER_CLASS_KEY = "navGraphBuilderClass"
     }
 }
+
+
+
+
+
 
 
 
