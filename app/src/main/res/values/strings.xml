@@ -6,4 +6,7 @@
     <string name="fragment_b">Fragment B</string>
     <string name="fragment_c">Fragment C</string>
     <string name="title_activity_generic_compose">GenericComposeActivity</string>
+    <string name="title_activity_separate_state_in_single_screen">
+        SeparateStateInSingleScreenActivity
+    </string>
 </resources>
