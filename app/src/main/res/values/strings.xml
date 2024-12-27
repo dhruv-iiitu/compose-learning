@@ -9,4 +9,5 @@
     <string name="title_activity_separate_state_in_single_screen">
         SeparateStateInSingleScreenActivity
     </string>
+    <string name="title_activity_type_safe_nav">TypeSafeNav</string>
 </resources>
